@@ -110,7 +110,7 @@ class ABCScriptCreator:
                 repeated_sequence(f)
 
             print("&put", file=f)
-            print(f"buffer -c -N {self.max_fanout}", file=f)
+            print(f"buffer -c -N {self.max_fanout} -S {self.max_transition}", file=f)
             print("topo", file=f)
             print("stime -c", file=f)
             print("upsize -c", file=f)
